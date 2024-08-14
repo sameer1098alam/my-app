@@ -1,0 +1,325 @@
+/* Container for the search header */
+.search-header {
+  width: 100%;
+  max-width: 1200px;
+  margin: -100px auto 0 auto; /* Start 1000px from the top, center horizontally */
+  padding: 2rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem; /* Add some space between search box and results */
+}
+
+/* Centering the search input */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  font-size: 0.875rem;
+  color: #4b5563;
+  outline: none;
+  transition: ring 0.2s, border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #3b82f6; /* Change the border color */
+  box-shadow: 0 0 0 1px #3b82f6; /* Create a border-like effect */
+}
+
+/* Filter buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-button.active {
+  background-color: #d1d5db;
+  color: #111827;
+}
+
+/* Results container */
+.results-container {
+  width: 100%;
+}
+
+/* File table */
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.file-table th,
+.file-table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.file-table thead {
+  background-color: #f3f4f6;
+}
+
+.file-table tbody tr {
+  border-bottom: 1px solid #d1d5db;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.file-table tbody tr:hover {
+  background-color: #f3f4f6; /* Light grey background on hover */
+  transform: translateY(-5px); /* Raise up effect */
+}
+
+.file-table tbody tr td {
+  transition: color 0.3s ease;
+}
+
+.file-table tbody tr:hover td {
+  color: #1f2937; /* Dark grey color for text on hover */
+}
+
+/* File info section */
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* File icon */
+.file-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Download button */
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.download-button:hover {
+  background-color: #d1d5db;
+  color: #111827;
+}
+
+/* Download icon */
+.download-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #333; /* Greyish black color for icons */
+}
+
+/* View icon */
+.view-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #333; /* Greyish black color for icons */
+}
+
+/* Pagination container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination button.active {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+/* Base styles for the entire container */
+.max-w-3xl {
+  max-width: 48rem; /* 3xl: 48rem */
+  width: 100%;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  padding-top: 3rem; /* py-12 */
+  padding-bottom: 3rem; /* py-12 */
+}
+
+.sm\:px-6 {
+  padding-left: 1.5rem; /* 6 */
+  padding-right: 1.5rem; /* 6 */
+}
+
+.lg\:px-8 {
+  padding-left: 2rem; /* 8 */
+  padding-right: 2rem; /* 8 */
+}
+
+/* Header styles */
+.text-4xl {
+  font-size: 2.25rem; /* 4xl: 2.25rem */
+  line-height: 2.5rem; /* 4xl: 2.5rem */
+  font-weight: 700; /* font-bold */
+  letter-spacing: -0.025em; /* tracking-tight */
+}
+
+.text-foreground {
+  color: #111827; /* Adjust this to match your theme */
+}
+
+.text-muted-foreground {
+  color: #6b7280; /* Adjust this to match your theme */
+}
+
+/* Search input styles */
+input[type="search"] {
+  height: 2.5rem; /* h-10 */
+  width: 100%; /* w-full */
+  border-radius: 0.375rem; /* rounded-md */
+  border: 1px solid #d1d5db; /* border-input */
+  background-color: #ffffff; /* bg-background */
+  padding-left: 0.75rem; /* px-3 */
+  padding-right: 0.75rem; /* px-3 */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  font-size: 0.875rem; /* text-sm */
+  color: #111827; /* text-foreground */
+}
+
+input[type="search"]::placeholder {
+  color: #9ca3af; /* placeholder:text-muted-foreground */
+}
+
+input[type="search"]:focus-visible {
+  outline: none; /* focus-visible:outline-none */
+  border-color: #3b82f6; /* focus-visible:ring-2 focus-visible:ring-ring */
+  box-shadow: 0 0 0 2px #3b82f6; /* focus-visible:ring-offset-2 */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  caption-side: bottom; /* caption-bottom */
+  font-size: 0.875rem; /* text-sm */
+}
+
+thead {
+  border-bottom: 1px solid #d1d5db; /* [&_tr]:border-b */
+}
+
+tbody tr:last-child {
+  border-bottom: none; /* [&_tr:last-child]:border-0 */
+}
+
+th,
+td {
+  padding: 1rem; /* p-4 */
+  text-align: left; /* text-left */
+  vertical-align: middle; /* align-middle */
+  font-weight: 500; /* font-medium */
+}
+
+th {
+  color: #6b7280; /* text-muted-foreground */
+}
+
+tr {
+  border-bottom: 1px solid #d1d5db; /* border-b */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+tr:hover {
+  background-color: #f3f4f6; /* Light grey background on hover */
+  transform: translateY(-5px); /* Raise up effect */
+}
+
+/* Action button styles */
+button {
+  display: inline-flex; /* inline-flex */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  white-space: nowrap; /* whitespace-nowrap */
+  border-radius: 0.375rem; /* rounded-md */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  padding: 0; /* p-0 */
+  height: 2.5rem; /* h-10 */
+  width: 2.5rem; /* w-10 */
+  border: 1px solid #d1d5db; /* border-input */
+  background-color: #ffffff; /* bg-background */
+  color: #111827; /* text-foreground */
+  transition: background-color 0.2s, color 0.2s; /* transition-colors */
+}
+
+button:hover {
+  background-color: #414242; /* hover:bg-accent */
+  color: #ffffff; /* hover:text-accent-foreground */
+}
+
+button:disabled {
+  pointer-events: none; /* disabled:pointer-events-none */
+  opacity: 0.5; /* disabled:opacity-50 */
+}
+
+button:focus-visible {
+  outline: none; /* focus-visible:outline-none */
+  border-color: #3b82f6; /* focus-visible:ring-2 focus-visible:ring-ring */
+  box-shadow: 0 0 0 2px #3b82f6; /* focus-visible:ring-offset-2 */
+}
+
+.ring-offset-background {
+  box-shadow: 0 0 0 2px #f9fafb; /* ring-offset-background */
+}
+
+/* Flexbox utilities */
+.flex {
+  display: flex; /* flex */
+}
+
+.items-center {
+  align-items: center; /* items-center */
+}
+
+.gap-2 {
+  gap: 0.5rem; /* gap-2 */
+}

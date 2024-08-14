@@ -1,0 +1,55 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to start of the flex container */
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 80vh; /* 80% of viewport height */
+  max-width: 800px; /* Limit the maximum width */
+  max-height: 500px; /* Limit the maximum height */
+  min-width: 400px; /* Minimum width to ensure a reasonable size */
+  min-height: 300px; /* Minimum height to ensure a reasonable size */
+  overflow: hidden; /* Hide scrollbars */
+  margin-top: 100px; /* Increase margin to bring it further down */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 28px; /* Larger font size for better visibility */
+  color: #333; /* Dark gray color */
+  background-color: #f1f1f1; /* Light background color for the button */
+  border: 2px solid #ddd; /* Border around the button */
+  border-radius: 50%; /* Circular button */
+  width: 40px; /* Button width */
+  height: 40px; /* Button height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+.close-btn:hover {
+  background-color: #e1e1e1; /* Slightly darker background on hover */
+  color: #000; /* Darker color on hover */
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.close-btn:active {
+  background-color: #d1d1d1; /* Even darker background when clicked */
+  transform: scale(0.95); /* Slightly smaller on click */
+}

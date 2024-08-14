@@ -1,0 +1,37 @@
+.admin-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .file-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .file-table th, .file-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .file-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .file-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .file-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .view-button {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .view-button:hover {
+    text-decoration: underline;
+  }
+  
